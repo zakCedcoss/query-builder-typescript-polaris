@@ -14,6 +14,7 @@ function App() {
   const [message, setMessage] = useState<string>("");
   const [errorMessage, setErrorMessage] = useState<string>("");
   const [isError, setIsError] = useState<Boolean>(false);
+  const [closeToast, setCloseToast] = useState<Boolean>(true);
 
   useEffect(() => {
     let s: string = "";
@@ -60,6 +61,7 @@ function App() {
     };
     setGroupsArray([...groupsArray, newGroup]);
     setIsError(false);
+    setCloseToast(true);
   };
 
   const handleSubmit = (): void => {
@@ -79,10 +81,12 @@ function App() {
       console.log("Please fill all fields !!!");
       setErrorMessage("Please fill all fields !!!");
       setIsError(true);
+      setCloseToast(false);
     } else {
       console.log(groupsArray);
       setErrorMessage("Check CONSOLE.LOG in Developer Tool");
       setIsError(false);
+      setCloseToast(true);
     }
   };
 
@@ -91,14 +95,14 @@ function App() {
 
   return (
     <div className="App">
-      {isError && (
+      {isError && !closeToast && (
         <div className="error">
           <Frame>
             <Toast
               content={errorMessage}
               duration={2000}
               error={true}
-              onDismiss={() => setIsError(false)}
+              onDismiss={() => setCloseToast(true)}
             />
           </Frame>
         </div>
