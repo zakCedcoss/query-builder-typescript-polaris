@@ -154,7 +154,7 @@ function Row({
             />
           )}
         </Stack.Item>
-        {rowsArray.length !== 1 && (
+        {rowsArray.length > 1 && (
           <Stack.Item>
             <div className="delete" onClick={handleRowDelete}>
               <Icon source={DeleteMajor} color="base" />

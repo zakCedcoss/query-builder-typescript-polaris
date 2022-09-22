@@ -1,4 +1,4 @@
-import { Button, Card, TextStyle } from "@shopify/polaris";
+import { Button, Card, Frame, TextStyle, Toast } from "@shopify/polaris";
 import { useEffect, useState } from "react";
 import "./App.css";
 import Group from "./components/Group";
@@ -99,8 +99,19 @@ function App() {
 
   return (
     <div className="App">
+      {isError && (
+        <div className="error">
+          <Frame>
+            <Toast
+              content={errorMessage}
+              duration={2000}
+              error={true}
+              onDismiss={() => setIsError(false)}
+            />
+          </Frame>
+        </div>
+      )}
       <Card>
-        {errorMessage && <div className="error">{errorMessage}</div>}
         {message && (
           <div className="query">
             <TextStyle>{message}</TextStyle>
