@@ -1,3 +1,4 @@
-# [batch-task-typescript](https://query-builder-typescript-polaris.netlify.app/)
+<<<<<<< HEAD
+# [query-builder-typescript-polaris](https://query-builder-typescript-polaris.netlify.app/)
 
 ##### click the above link to view the task
