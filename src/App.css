@@ -1,0 +1,59 @@
+.App{
+  position: relative;
+  margin-inline: auto;
+}
+.group {
+  width: 95%;
+  margin:1rem auto;
+}
+.row{
+  width: 100%;
+  margin-block: 1rem;
+}
+.delete{
+  width: 40px;
+  aspect-ratio: 1;
+  font-size: 1.3rem;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  box-shadow: 0 0 10px #c5c5c5;
+  border-radius: 10px;
+  cursor: pointer;
+  transform: translateY(21px);
+}
+.add-row-btn {
+  width: 100%;
+  display: grid;
+  place-items: flex-end;
+  margin-block: 1rem;
+  padding-inline: 1rem;
+}
+.remove-group-btn {
+  width: 100%;
+  display: grid;
+  place-items: flex-end;
+  margin-block: 1rem;
+  padding-inline: 0.5rem;
+}
+.see-query-result{
+  width: 100%;
+  display: grid;
+  place-items: flex-start;
+  padding: 1rem 2rem;
+}
+.submit-btn {
+  width: 100%;
+  display: grid;
+  place-items: flex-end;
+  padding: 1rem 2rem;
+}
+.query {
+  width: max-content;
+  display: grid;
+  place-items: flex-start;
+  padding: 0.5rem 2rem;
+  background-color: #cccccc;
+  margin-left: 2rem;
+  border-radius: 5px;
+}
