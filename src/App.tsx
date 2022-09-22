@@ -16,14 +16,6 @@ function App() {
   const [isError, setIsError] = useState<Boolean>(false);
 
   useEffect(() => {
-    let interval = setTimeout(() => {
-      setErrorMessage("");
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, [errorMessage, isError]);
-
-  useEffect(() => {
     let s: string = "";
     groupsArray?.map((g: GroupType, j: number) => {
       if (j > 0) {
