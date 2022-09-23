@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Row from "./Row";
 import { GroupType, RowType } from "../types";
-import { Button, ButtonGroup, Card, Stack } from "@shopify/polaris";
+import { Button, ButtonGroup, Card } from "@shopify/polaris";
 
 type GroupProps = {
   group: GroupType;
