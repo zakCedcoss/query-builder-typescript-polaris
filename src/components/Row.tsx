@@ -1,4 +1,4 @@
-import { Icon, Select, Stack, TextField } from "@shopify/polaris";
+import { Card, Icon, Select, Stack, TextField } from "@shopify/polaris";
 import { useEffect, useState } from "react";
 import { DeleteMajor } from "@shopify/polaris-icons";
 import { RowType } from "../types";
@@ -109,7 +109,7 @@ function Row({
 
   return (
     <div className="row">
-      <Stack distribution="fillEvenly">
+      <Stack distribution="equalSpacing">
         <Stack.Item fill>
           <Select
             id="firstSelect"
@@ -132,8 +132,8 @@ function Row({
             error={isError && isSecondEmpty ? true : false}
           />
         </Stack.Item>
-        {secondSelect === "Equals" ? (
-          <Stack.Item fill>
+        <Stack.Item fill>
+          {secondSelect === "Equals" ? (
             <Select
               id="thirdSelect"
               label="Select By"
@@ -143,9 +143,7 @@ function Row({
               value={thirdSelect}
               error={isError && isThirdEmpty ? true : false}
             />
-          </Stack.Item>
-        ) : (
-          <Stack.Item>
+          ) : (
             <TextField
               id="thirdSelect"
               label="Value"
@@ -154,8 +152,8 @@ function Row({
               autoComplete="off"
               error={isError && isThirdEmpty ? true : false}
             />
-          </Stack.Item>
-        )}
+          )}
+        </Stack.Item>
         {rowsArray.length > 1 && (
           <Stack.Item>
             <div className="delete" onClick={handleRowDelete}>
