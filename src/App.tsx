@@ -13,8 +13,8 @@ function App() {
   ]);
   const [message, setMessage] = useState<string>("");
   const [errorMessage, setErrorMessage] = useState<string>("");
-  const [isError, setIsError] = useState<Boolean>(false);
-  const [closeToast, setCloseToast] = useState<Boolean>(true);
+  const [isError, setIsError] = useState<boolean>(false);
+  const [closeToast, setCloseToast] = useState<boolean>(true);
 
   useEffect(() => {
     let s: string = "";
@@ -50,7 +50,7 @@ function App() {
     setGroupsArray(data);
   };
 
-  const handleSetIsError = (value: Boolean) => {
+  const handleSetIsError = (value: boolean) => {
     setIsError(value);
   };
 
@@ -65,9 +65,9 @@ function App() {
   };
 
   const handleSubmit = (): void => {
-    let error: Boolean = false;
-    groupsArray.map((g) => {
-      g.rowsArray.map((r) => {
+    let error: boolean = false;
+    groupsArray.forEach((g) => {
+      g.rowsArray.forEach((r) => {
         if (
           r.firstSelect === "" ||
           r.secondSelect === "" ||

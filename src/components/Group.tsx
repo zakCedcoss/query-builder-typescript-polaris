@@ -7,8 +7,8 @@ type GroupProps = {
   group: GroupType;
   groupsArray: GroupType[];
   handleSetGroupsArray: (data: GroupType[]) => void;
-  isError: Boolean;
-  handleSetIsError: (value: Boolean) => void;
+  isError: boolean;
+  handleSetIsError: (value: boolean) => void;
   handleAddGroup: () => void;
 };
 

@@ -1,4 +1,4 @@
-import { Card, Icon, Select, Stack, TextField } from "@shopify/polaris";
+import { Icon, Select, Stack, TextField } from "@shopify/polaris";
 import { useEffect, useState } from "react";
 import { DeleteMajor } from "@shopify/polaris-icons";
 import { RowType } from "../types";
@@ -7,8 +7,8 @@ type RowProps = {
   row: RowType;
   rowsArray: RowType[];
   handleSetRowsArray: (data: RowType[]) => void;
-  isError: Boolean;
-  handleSetIsError: (value: Boolean) => void;
+  isError: boolean;
+  handleSetIsError: (value: boolean) => void;
 };
 
 function Row({
@@ -44,9 +44,9 @@ function Row({
   const [secondSelect, setSecondSelect] = useState<string>("");
   const [thirdSelect, setThirdSelect] = useState<string>("");
 
-  const [isFirstEmpty, setIsFirstEmpty] = useState<Boolean>(true);
-  const [isSecondEmpty, setIsSecondEmpty] = useState<Boolean>(true);
-  const [isThirdEmpty, setIsThirdEmpty] = useState<Boolean>(true);
+  const [isFirstEmpty, setIsFirstEmpty] = useState<boolean>(true);
+  const [isSecondEmpty, setIsSecondEmpty] = useState<boolean>(true);
+  const [isThirdEmpty, setIsThirdEmpty] = useState<boolean>(true);
   //   console.log(firstSelect, secondSelect, thirdSelect);
   //   console.log(row);
 
